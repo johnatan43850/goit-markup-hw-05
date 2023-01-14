@@ -46,6 +46,9 @@
 /* акцент #2196F3; */
 /* білий #FFFFFF; */
 body{
+
+        padding-top: 80px;
+
     font-size: 14px;
     letter-spacing: 0.03em;
     font-family: Roboto, sans-serif;
@@ -106,6 +109,8 @@ body{
         font-size: 14px;
         line-height: 1.14;
         letter-spacing: 0.02em;
+
+
 } 
 
 .nav .item:not(:last-child){
@@ -115,6 +120,28 @@ body{
 .nav .link.current{
         color: var(--accent-text-color)
 }
+
+.current{
+        position: relative;
+}
+
+.current::after{
+
+        content:"" ;
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color:var(--accent-text-color);
+
+        position: absolute;
+        left: 0;
+        bottom: 0 ;
+        border-radius: 4px;
+        
+
+}
+
+
 .link{
     
         color: var(--pramary-text-color);
@@ -126,6 +153,7 @@ body{
         align-items: center;
         padding-top: 32px;
         padding-bottom: 32px;
+        
 }
 
 .link:hover,
@@ -135,8 +163,15 @@ body{
 }
 /*heder*/
 .header{
-        border-bottom: 1px solid #ECECEC
-}
+        border-bottom: 1px solid #ECECEC;
+        position: fixed;
+        width: 100%;
+        min-height: 80px;
+        top: 0;
+        left: 0;
+        background: var(--white-text-color);
+              
+} 
 
 .header-box{
     align-items: center;
@@ -510,9 +545,9 @@ margin-left: auto;
        align-items: center ;
        justify-content: center;
        
-        color: var(--icon-fill-color);
         width: 170px;
         height: 90px;
+        color: var(--icon-fill-color);
         border: 1px solid var(--icon-fill-color); 
         border-radius: 4px;
 }
